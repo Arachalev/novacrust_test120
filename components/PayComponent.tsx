@@ -12,12 +12,17 @@ import { StylesConfig } from "react-select";
 const options = [
   {
     value: "apple",
-    label: "Apple",
+    label: "Rainbow",
     image: "/icons/rainbow.svg",
   },
   {
+    value: "apple",
+    label: "Metamask",
+    image: "/icons/mask.svg",
+  },
+  {
     value: "banana",
-    label: "Banana",
+    label: "Other Crypto Wallets (Binance, Conibase, Bybit etc)",
     image: "/icons/wallet.svg",
   },
 ];

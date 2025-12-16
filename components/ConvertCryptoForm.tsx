@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -37,22 +36,21 @@ const ConvertCryptoForm = ({ pay = true }: ConvertCryptoFormProps) => {
   ];
   const Flag = Flags[selectedCountry.code as keyof typeof Flags];
 
-
   return (
-    <div className="border-[#E0E0E0] border p-6 rounded-[30px] w-[512px] h-[112px] ">
+    <div className="border-[#E0E0E0] border p-6 rounded-[30px]  sm:w-[512px] h-[112px] ">
       <p className="font-semibold text-[#828282]">
         {pay ? "You pay" : "You receive"}
       </p>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-betweeen">
         <input
           type="number"
           disabled={!pay}
-          className="text-[#000E10] outline-none font-semibold text-2xl placeholder:text-2xl placeholder:text-[#000E10]"
+          className="text-[#000E10] w-full outline-none font-semibold text-2xl placeholder:text-2xl placeholder:text-[#000E10]"
           placeholder="1.00"
         />
         <div
           onClick={() => setShowDropDown((state) => !state)}
-          className="relative border border-[#E0E0E0] rounded-[20px] bg-[#F7F7F7] w-[100px] h-[36px] px-[12px] py-2 flex items-center gap-1 cursor-pointer"
+          className="relative border border-[#E0E0E0] rounded-[20px] bg-[#F7F7F7] w-[110px] h-[36px] py-2 px-3 flex items-center gap-1 cursor-pointer"
         >
           {pay ? (
             <Image src={selectedItem.image} width={20} height={20} alt="icon" />
@@ -60,12 +58,12 @@ const ConvertCryptoForm = ({ pay = true }: ConvertCryptoFormProps) => {
             <Flag style={{ width: 24 }} />
           )}
 
-          <p className="text-[#013941] text-sm font-medium">
+          <p className="text-[#013941] text-xs sm:text-sm font-medium">
             {pay
               ? selectedItem.text.toLocaleUpperCase()
               : selectedCountry.code.toLocaleUpperCase()}
           </p>
-          <Image src={"/icons/downArr.svg"} width={20} height={20} alt="icon" />
+          <Image src={"/icons/downArr.svg"} width={13.5} height={7.5} alt="icon" />
           <div
             className={`${
               showDropDown ? "block" : "hidden"
@@ -121,8 +119,7 @@ const ConvertCryptoForm = ({ pay = true }: ConvertCryptoFormProps) => {
                     );
                   })
                 : countries.slice(0, 3).map((country) => {
-                   const Flag = Flags[country.code as keyof typeof Flags];
-
+                    const Flag = Flags[country.code as keyof typeof Flags];
 
                     return (
                       <div

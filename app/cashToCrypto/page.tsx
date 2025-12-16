@@ -9,14 +9,14 @@ const page = () => {
       <div className="mt-20">
         <TopNav />
       </div>
-      <div className="p-16 flex flex-col items-center justify-center">
+      <div className=" p-4 sm:p-16 flex flex-col items-center justify-center">
         <h4
-          className={` mb-4 text-[#013941] font-medium text-[32px]`}
+          className={` mb-4 text-[#013941] font-medium text-2xl sm:text-[32px]`}
           style={{ fontFamily: "clash, sans-serif" }}
         >
           Coming Soon!
         </h4>
-        <p className="mb-[30px] text-[#4F4F4F] text-xl text-center">
+        <p className="mb-[30px] text-[#4F4F4F] text-lg sm:text-xl text-center">
           Cash to Crypto is almost here. <br />
           Enter your email and we’ll let you know the moment it’s live.
         </p>

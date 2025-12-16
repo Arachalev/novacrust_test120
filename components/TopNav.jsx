@@ -31,7 +31,7 @@ const TopNav = () => {
                   selected === item
                     ? "bg-[#013941] text-[#F8FEFB]"
                     : "bg-none text-[#828282]"
-                }  h-8.5 rounded-[30px] text-sm text-center font-medium px-4 whitespace-nowrap cursor-pointer`}
+                }  h-8.5 rounded-[30px] text-xs sm:text-sm text-center font-medium px-4 whitespace-nowrap cursor-pointer`}
           >
             {item}
           </button>
