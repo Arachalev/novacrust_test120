@@ -5,9 +5,11 @@ import PayComponent from "@/components/PayComponent";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-s w-full items-center justify-center bg-white">
-      <div className="p-16 flex flex-col items-center gap-10">
+    <div className="max-w-[640px]  flex flex-col min-h-screen w-full items-center bg-white">
+      <div className="mt-20">
         <TopNav />
+      </div>
+      <div className="p-16 flex flex-col items-center gap-10">
         <div className="flex flex-col gap-6">
           <ConvertCryptoForm pay />
 

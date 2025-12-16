@@ -1,11 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const TopNavData = ["Crypto to cash", "Cash to crypto", "Crypto to fiat loan"];
 
 const TopNav = () => {
-  const [selected, setSelected] = useState("Crypto to cash");
+  const pathname = usePathname();
+  const [selected, setSelected] = useState(
+    pathname == "/" ? "Crypto to cash" : "Cash to crypto"
+  );
   const router = useRouter();
 
   return (

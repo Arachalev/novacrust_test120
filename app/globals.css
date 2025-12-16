@@ -4,24 +4,12 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'clash';
+  src: url('/fonts/ClashDisplay-Medium.woff2') format('truetype');
+  font-weight: medium;
+  font-style: normal;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   /* background: var(--background);
