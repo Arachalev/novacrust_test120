@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} antialiased max-w-[100vw] overflow-hidden flex items-center justify-center`}
+        className={`${outfit.className} antialiased max-w-[100vw] flex items-center justify-center`}
       >
         {children}
       </body>
