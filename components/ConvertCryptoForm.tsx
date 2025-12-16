@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -9,12 +10,18 @@ interface ConvertCryptoFormProps {
 
 const ConvertCryptoForm = ({ pay = true }: ConvertCryptoFormProps) => {
   const [showDropDown, setShowDropDown] = useState(false);
-  const [selectedItem, setSelectedItem] = useState({
+  const [selectedItem, setSelectedItem] = useState<{
+    image: string;
+    text: string;
+  }>({
     image: "/crypto-icons/color/eth.svg",
     text: "ETH",
   });
 
-  const [selectedCountry, setSelectedCountry] = useState({
+  const [selectedCountry, setSelectedCountry] = useState<{
+    code: string;
+    name: string;
+  }>({
     name: "Nigeria",
     code: "NG",
   });
@@ -28,7 +35,8 @@ const ConvertCryptoForm = ({ pay = true }: ConvertCryptoFormProps) => {
     { name: "Germany", code: "DE" },
     { name: "India", code: "IN" },
   ];
-  const Flag = Flags[selectedCountry.code];
+  const Flag = Flags[selectedCountry.code as keyof typeof Flags];
+
 
   return (
     <div className="border-[#E0E0E0] border p-6 rounded-[30px] w-[512px] h-[112px] ">
@@ -113,7 +121,8 @@ const ConvertCryptoForm = ({ pay = true }: ConvertCryptoFormProps) => {
                     );
                   })
                 : countries.slice(0, 3).map((country) => {
-                    const Flag = Flags[country.code];
+                   const Flag = Flags[country.code as keyof typeof Flags];
+
 
                     return (
                       <div

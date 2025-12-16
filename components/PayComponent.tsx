@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React from "react";
@@ -5,6 +6,8 @@ import Select, { components } from "react-select";
 import Image from "next/image";
 import CustomOption from "./CustomOption";
 import CustomSingleValue from "./CustomSingleValue";
+import { StylesConfig } from "react-select";
+
 
 const options = [
   {
@@ -24,7 +27,7 @@ interface PayComponentProps {
 }
 
 const PayComponent = ({ pay }: PayComponentProps) => {
-  const customStyles = {
+  const customStyles:StylesConfig = {
     control: (base, state) => ({
       ...base,
       border: "1px solid #E0E0E0",
